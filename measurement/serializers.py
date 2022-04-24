@@ -7,7 +7,7 @@ from measurement.models import Measurement, Sensor
 class MeasurementSerializer(serializers.ModelSerializer):
     class Meta:
         model = Measurement
-        fields = ['sensor', 'temperature']
+        fields = ('sensor', 'temperature')
 
 
 class SensorDetailSerializer(serializers.ModelSerializer):
@@ -16,8 +16,3 @@ class SensorDetailSerializer(serializers.ModelSerializer):
         model = Sensor
         fields = ['id', 'name', 'description', 'measurements']
 
-    # def create(self, validated_data):
-    #     profile_data = validated_data.pop('measurements')
-    #     sensor = Sensor.objects.create(**validated_data)
-    #     Measurement.objects.create(sensor=sensor, **profile_data)
-    #     return sensor
