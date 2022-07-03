@@ -13,7 +13,7 @@ POST  http://127.0.0.1:8000/sensors/
 Content-Type: application/json
 
 {
-  "name": "ESP35457",
+  "name": "test",
   "description": "Датчик сзади дома"
 }
 
@@ -24,7 +24,7 @@ PATCH http://127.0.0.1:8000/sensors/1/
 Content-Type: application/json
 
 {
-  "description": "Перенес датчик на балкон"
+  "description": "ola"
 }
 
 ###
@@ -35,11 +35,11 @@ Content-Type: application/json
 
 {
   "sensor": 2,
-  "temperature": 22.3
+  "temperature": 0.0
 }
 
 ###
 
 # получение информации по датчику
-GET http://127.0.0.1:8000/sensors/1/
+GET http://127.0.0.1:8000/sensors/2/
 Content-Type: application/json
